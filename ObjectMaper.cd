@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ObjectMaper.WizardPresenter" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIAQEAgAAAAAAAAAAgAAQAAAAAAAAoEAAAAAAAAA=</HashCode>
+      <FileName>Controllers\WizardPresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ObjectMaper.TransformContext" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAIAAAAAAAAAAAAACAAAAAABAACAEAAAA=</HashCode>
+      <FileName>Models\TransformContext.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ObjectMaper.IConfiguration" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Configuration\IConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.iMaper" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAIAAAAAAAAAEAAAAAAAAAAAAAAECAAAA=</HashCode>
+      <FileName>Interfaces\Maper\IMaper.cs</FileName>
+      <NewMemberFileName>Interfaces\Maper\iMaper.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IReader" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAgAAAAAAAAAACAAAAAAAAQAAAA=</HashCode>
+      <FileName>Interfaces\Reader\IReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.IReaderConfiguration">
+    <Position X="12.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAABAAAAAgQAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Interfaces\Configuration\IReaderConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.IReaderRow" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Reader\IReaderRow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IMapping" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Maper\IMapping.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IParser" Collapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Parser\IParser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IWriter" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Writer\IWriter.cs</FileName>
+      <NewMemberFileName>Interfaces\Writer\iWriter.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IInputData" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Parser\IInputData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IExpresion" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAIAAAAAAgAAAAAIAAAACAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Maper\IExpresion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.IWizardConfiguration">
+    <Position X="12.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Configuration\IWizardConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.IParserConfiguration">
+    <Position X="12.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Configuration\IParserConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.IWizard" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Wizard\IWizard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ObjectMaper.Interfaces.ITransformContext">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAIAAAAAAAAAAAAACAAAAAABAACAEAAAA=</HashCode>
+      <FileName>Interfaces\ITransformContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
