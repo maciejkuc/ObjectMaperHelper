@@ -14,7 +14,7 @@ namespace ObjectMaperProgram
             //TransformContext context = new TransformContext();
             //ObjectMaper objectMaper = new ObjectMaper(context);
            
-            ObjectMaperControler objectMaperControler = new ObjectMaperControler();
+            ObjectMappingControler objectMaperControler = new ObjectMappingControler();
             IEnumerable<Car> cars;
 
             objectMaperControler.configuration.OpenWizard = false;

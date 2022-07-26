@@ -5,7 +5,7 @@ using ObjectMaper.Interfaces;
 
 namespace ObjectMaper
 {
-    class ObjectMaperControler
+    class ObjectMappingControler
     {
         private ITransformContext context;
         IObjectProvider ObjectProvider { get; set; }
@@ -18,7 +18,7 @@ namespace ObjectMaper
 
         WizardPresenter Wizard;
 
-        public ObjectMaperControler()
+        public ObjectMappingControler()
         {
             ITransformContext context = new TransformContext();
             Reader = context.Reader;
@@ -29,7 +29,7 @@ namespace ObjectMaper
             ConfigWriter = context.Writer;
         }
 
-        public ObjectMaperControler(ITransformContext context)
+        public ObjectMappingControler(ITransformContext context)
         {
             this.context = context;
             Reader = context.Reader;

@@ -73,7 +73,7 @@
     <Compile Include="ViewModels\ParserViewModel.cs" />
     <Compile Include="Interfaces\Wizard\IWizard.cs" />
     <Compile Include="Interfaces\Writer\IWriter.cs" />
-    <Compile Include="Controllers\ObjectMaperControler.cs" />
+    <Compile Include="Controllers\ObjectMappingControler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\TransformContext.cs" />

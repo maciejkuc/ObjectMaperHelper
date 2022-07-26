@@ -1,17 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 using ObjectMaper.Interfaces;
 using ObjectMaper.ViewModel;
 
 namespace ObjectMaper
 {
-    class WizardPresenter : IWizard,IConfigWizard,IDataWizard
+    class WizardPresenter : IWizard, IConfigWizard, IDataWizard
     {
         ParserViewModel ParserViewModel;
         MaperViewModel MaperViewModel;
         ReaderViewModel ReaderViewModel;
-        IObjectProvider provider;
+
         public ITransformContext Context { get; }
         IWizardConfiguration Configuration { get; }
+
+        IEnumerable<IObjectInfo> EnteredObjects;
 
         public WizardPresenter(ITransformContext context)
         {
@@ -19,7 +22,9 @@ namespace ObjectMaper
             ParserViewModel = new ParserViewModel(Context.Parser, context.configuration);
             MaperViewModel = new MaperViewModel(Context.Maper, context.configuration);
             ReaderViewModel = new ReaderViewModel(Context.Reader, context.configuration);
+
             Configuration = context.configuration;
+            EnteredObjects = Context.ObjectProvider.GetProperties();
         }
 
         public IWizard GetWizard()
