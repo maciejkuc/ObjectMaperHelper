@@ -5,6 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,9 +18,11 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+    - name: Set NuGet server
+      run: dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build
     - name: Test
       run: dotnet test --no-build --verbosity normal
