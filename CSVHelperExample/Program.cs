@@ -5,7 +5,7 @@ using System.Linq;
 using CsvHelper;
 using CsvHelper.Configuration;
 
-namespace MappingByColumnName
+namespace CSVHelperExample
 {
     class Program
     {
@@ -23,8 +23,8 @@ namespace MappingByColumnName
             var config = new CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)
             {
                 HasHeaderRecord = true,
-                DetectDelimiter=true,
-                
+                DetectDelimiter = true,
+
             };
 
             using (var reader = new StreamReader("Lista_transakcji.csv"))

@@ -1,7 +1,7 @@
 ﻿using System;
 using CsvHelper.Configuration;
 
-namespace MappingByColumnName
+namespace CSVHelperExample
 {
     sealed class BankOperationMap : ClassMap<BankOperationDocument>
     {
