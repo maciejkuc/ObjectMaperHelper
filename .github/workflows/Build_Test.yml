@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Restore nugets
-      run: Install-Package CsvHelper -Version 2.15.0.2
+      run: dotnet add package CsvHelper --version 2.15.0.2
     - name: Build
       run: dotnet build --no-restore
     - name: Test
