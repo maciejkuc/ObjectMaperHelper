@@ -19,9 +19,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
-    - name: Restore Example projects dependencies
-      run: dotnet restore ./CSVHelperExample/CSVHelperExample.csproj
+      run: dotnet restore -vd
+
     - name: Build --no-restore
       run: dotnet build
     - name: Test
