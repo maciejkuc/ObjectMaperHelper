@@ -3,7 +3,7 @@ using CsvHelper.Configuration;
 
 namespace MappingByColumnName
 {
-    sealed class BankOperationMap : CsvClassMap<BankOperationDocument>
+    sealed class BankOperationMap : ClassMap<BankOperationDocument>
     {
         public BankOperationMap()
         {

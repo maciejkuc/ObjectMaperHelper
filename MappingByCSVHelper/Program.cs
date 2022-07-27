@@ -10,7 +10,7 @@ namespace MappingByColumnName
     {
         static void Main()
         {
-            ParseStatement();
+            //ParseStatement();
             AutoParseStatement();
         }
 
@@ -19,17 +19,18 @@ namespace MappingByColumnName
         {
             IEnumerable<BankOperationDocument> documents;
 
-            using (var streamReader = File.OpenText("Lista_transakcji.csv"))
-            {
-                var reader = new CsvReader(streamReader);
-                reader.Configuration.RegisterClassMap<BankOperationMap>();
-                reader.Configuration.Delimiter = ";";
-                reader.Configuration.IgnoreQuotes = true;
-                reader.Configuration.TrimFields = true;
-                //reader.Read();
-                //BankOperationDocument doc =  reader.GetRecord<BankOperationDocument>();
+            using (var reader = new StreamReader("Lista_transakcji.csv"))
+            using (var csvreader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
+            {               
+                csvreader.Context.RegisterClassMap<BankOperationMap>();
+                csvreader.Context.Configuration.Delimiter = ";";
+                csvreader.Context.Configuration.DetectDelimiter = true;
+                csvreader.Context.Configuration.HasHeaderRecord = true;
+                //csvreader.Context.Configuration.TrimOptions = CsvHelper.Configuration.TrimOptions.InsideQuotes;
+                csvreader.Read();
+                BankOperationDocument doc =  csvreader.GetRecord<BankOperationDocument>();
 
-                documents = reader.GetRecords<BankOperationDocument>().ToList();
+                documents = csvreader.GetRecords<BankOperationDocument>().ToList();
             }
 
             foreach (var doc in documents)
@@ -44,19 +45,18 @@ namespace MappingByColumnName
         {
             IEnumerable<SimpleBankOperationDocument> documents;
 
-            using (var streamReader = File.OpenText("Lista_transakcji_headers.csv"))
+            using (var reader = new StreamReader("Lista_transakcji_headers.csv"))
+            using (var csvreader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
             {
-                var reader = new CsvReader(streamReader);
-                //reader.Configuration.RegisterClassMap<BankOperationMap>();
-                reader.Configuration.Delimiter = ";";
-                reader.Configuration.IgnoreQuotes = true;
-                reader.Configuration.TrimFields = true;
-                reader.Parser.Configuration.TrimHeaders = true;
-                reader.Configuration.AutoMap<SimpleBankOperationDocument>();
+                csvreader.Context.Configuration.Delimiter = ";";
+                //csvreader.Context.Configuration.Quote = '"';
+                //csvreader.Configuration.TrimFields = true;
+                //csvreader.Parser.Configuration.TrimHeaders = true;
+                csvreader.Context.AutoMap<SimpleBankOperationDocument>();
                 //reader.Read();
                 //SimpleBankOperationDocument doc =  reader.GetRecord<SimpleBankOperationDocument>();
 
-                documents = reader.GetRecords<SimpleBankOperationDocument>().ToList();
+                documents = csvreader.GetRecords<SimpleBankOperationDocument>().ToList();
             }
 
             foreach (var doc in documents)
