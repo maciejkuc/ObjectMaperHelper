@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper.Interactors
+namespace ObjectMappingHelper.Interactors
 {
-    class ObjectProvider : IObjectProvider
+    public class ObjectProvider : IObjectProvider
     {
         public IEnumerable<IObjectInfo> Properties { get; set; }
 

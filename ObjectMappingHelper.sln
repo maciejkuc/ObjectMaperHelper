@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectMappingHelper", "Obje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingByCSVHelper", "MappingByCSVHelper\MappingByCSVHelper.csproj", "{78ED77AF-2644-473B-A90C-BCBF9709260D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectMappingHelperTests", "ObjectMappingHelperTests\ObjectMappingHelperTests.csproj", "{0BD46459-DD09-4974-B9C0-C6977A320E17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{78ED77AF-2644-473B-A90C-BCBF9709260D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78ED77AF-2644-473B-A90C-BCBF9709260D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78ED77AF-2644-473B-A90C-BCBF9709260D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD46459-DD09-4974-B9C0-C6977A320E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD46459-DD09-4974-B9C0-C6977A320E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD46459-DD09-4974-B9C0-C6977A320E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD46459-DD09-4974-B9C0-C6977A320E17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

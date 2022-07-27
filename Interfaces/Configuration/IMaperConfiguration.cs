@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
-    internal interface IMaperConfiguration
+    public interface IMaperConfiguration
     {
         
     }

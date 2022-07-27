@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
-    internal interface IConfiguration : IMaperConfiguration, IWizardConfiguration, IParserConfiguration, IReaderConfiguration
+    public interface IConfiguration : IMaperConfiguration, IWizardConfiguration, IParserConfiguration, IReaderConfiguration
     {
         
     }

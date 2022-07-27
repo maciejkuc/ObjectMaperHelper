@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
 
-namespace ObjectMaper.Interfaces
+namespace ObjectMappingHelper.Interfaces
 {
-    interface IObjectProvider
+    public interface IObjectProvider
     {
         IEnumerable<IObjectInfo> Properties { get; set; }
 

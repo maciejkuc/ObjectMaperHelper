@@ -1,6 +1,6 @@
-﻿using ObjectMaper.Interfaces;
+﻿using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper.ViewModel
+namespace ObjectMappingHelper.ViewModel
 {
     internal class ParserViewModel
     {

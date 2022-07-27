@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface ITransformContext
+    public interface ITransformContext
     {
         IObjectProvider ObjectProvider { get; set; }
         IReader Reader { get; set; }

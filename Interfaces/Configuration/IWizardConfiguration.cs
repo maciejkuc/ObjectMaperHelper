@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
-    internal interface IWizardConfiguration
+    public interface IWizardConfiguration
     {
         string[] Descriptions { get; set; }
         bool OpenWizard { get; set; }

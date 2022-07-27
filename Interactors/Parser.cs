@@ -1,9 +1,9 @@
 ﻿using System;
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper.Interactors
+namespace ObjectMappingHelper.Interactors
 {
-    class Parser : IParser
+    public class Parser : IParser
     {
         public IInputData InputData { get; set; }
         public IParserConfiguration ParserConfiguration { get; set; }

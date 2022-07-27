@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper.Interactors
+namespace ObjectMappingHelper.Interactors
 {
-    class Reader : IReader
+    public class Reader : IReader
     {
         public string this[int index] => throw new NotImplementedException();
 

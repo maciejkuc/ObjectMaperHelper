@@ -1,4 +1,4 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
     public enum TrimOptions
     {

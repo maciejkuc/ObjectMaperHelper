@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IDataWriter
+    public interface IDataWriter
     {
         string WriteData();
     }

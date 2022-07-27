@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
-    internal interface IParserConfiguration
+    public interface IParserConfiguration
     {
         int FileHeaderLineCount { get; set; }
         int FileTailLineCount { get; set; }

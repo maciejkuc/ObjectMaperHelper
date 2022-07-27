@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IObjectInfo
+    public interface IObjectInfo
     {
         string ClassName { get; set; }
         string Name { get; set; }

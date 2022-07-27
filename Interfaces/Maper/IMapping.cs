@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IMapping
+    public interface IMapping
     {
         string ColumnName { get; set; }
         int Index { get; set; }

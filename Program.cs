@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using ObjectMaper;
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaperProgram
+namespace ObjectMappingHelperProgram
 {
     class Program
     {
         static void Main(string[] args)
         {
             //TransformContext context = new TransformContext();
-            //ObjectMaper objectMaper = new ObjectMaper(context);
+            //ObjectMappingHelper ObjectMappingHelper = new ObjectMappingHelper(context);
            
-            ObjectMappingControler objectMaperControler = new ObjectMappingControler();
+            ObjectMappingControler ObjectMappingHelperControler = new ObjectMappingControler();
             IEnumerable<Car> cars;
 
-            objectMaperControler.configuration.OpenWizard = false;
+            ObjectMappingHelperControler.configuration.OpenWizard = false;
 
-            objectMaperControler.GetObject<Car>();
-            objectMaperControler.GetInputData(new InputData() { Filename = "cars.csv" });
+            ObjectMappingHelperControler.GetObject<Car>();
+            ObjectMappingHelperControler.GetInputData(new InputData() { Filename = "cars.csv" });
 
-            cars = objectMaperControler.GetMappedData<Car>();
+            cars = ObjectMappingHelperControler.GetMappedData<Car>();
 
-            if (objectMaperControler.Reader.Configuration.HasHeaderRow)
+            if (ObjectMappingHelperControler.Reader.Configuration.HasHeaderRow)
             {
-                Console.WriteLine(string.Join("\t",objectMaperControler.Reader.GetColumnHeaders()));
+                Console.WriteLine(string.Join("\t",ObjectMappingHelperControler.Reader.GetColumnHeaders()));
             }
             foreach(Car car in cars)
             {

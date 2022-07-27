@@ -1,9 +1,9 @@
 ﻿using System.Data;
 using System.IO;
 
-namespace ObjectMaper.Interfaces
+namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IInputData
+    public interface IInputData
     {
         string Filename { get; set; }
         DataTable Datatable { get; set; }

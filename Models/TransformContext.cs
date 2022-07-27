@@ -1,6 +1,6 @@
-﻿using ObjectMaper.Interfaces;
+﻿using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper
+namespace ObjectMappingHelper
 {
     class TransformContext : ITransformContext
     {

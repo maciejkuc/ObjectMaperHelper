@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper
+namespace ObjectMappingHelper
 {
-    class ObjectMappingControler
+    public class ObjectMappingControler
     {
         private ITransformContext context;
         IObjectProvider ObjectProvider { get; set; }

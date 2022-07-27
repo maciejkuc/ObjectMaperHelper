@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace ObjectMaper.Interfaces
+namespace ObjectMappingHelper.Interfaces
 {
-    internal interface iMaper
+    public interface iMaper
     {
         IEnumerable<Dictionary<IObjectInfo, IMapping>> Maps { get; set; }
 

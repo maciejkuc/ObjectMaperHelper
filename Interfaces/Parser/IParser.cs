@@ -1,7 +1,7 @@
 ﻿
-namespace ObjectMaper.Interfaces
+namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IParser
+    public interface IParser
     {
         IInputData InputData { get; set; }
         IParserConfiguration ParserConfiguration { get; set; }

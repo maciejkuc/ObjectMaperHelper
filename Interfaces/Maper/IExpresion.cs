@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IExpresion
+    public interface IExpresion
     {
         string Expresion { get; set; }
         string ExpresionValue { get; set; }

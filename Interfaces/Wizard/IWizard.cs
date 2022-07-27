@@ -1,4 +1,4 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
     interface IWizard
     {

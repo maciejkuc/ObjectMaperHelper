@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ObjectMaper.Interfaces;
-using ObjectMaper.ViewModel;
+using ObjectMappingHelper.Interfaces;
+using ObjectMappingHelper.ViewModel;
 
-namespace ObjectMaper
+namespace ObjectMappingHelper
 {
     class WizardPresenter : IWizard, IConfigWizard, IDataWizard
     {
@@ -24,7 +24,7 @@ namespace ObjectMaper
             ReaderViewModel = new ReaderViewModel(Context.Reader, context.configuration);
 
             Configuration = context.configuration;
-            EnteredObjects = Context.ObjectProvider.GetProperties();
+            //EnteredObjects = Context.ObjectProvider.GetProperties();
         }
 
         public IWizard GetWizard()

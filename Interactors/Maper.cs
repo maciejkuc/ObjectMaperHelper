@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper.Interactors
+namespace ObjectMappingHelper.Interactors
 {
-    class Maper : iMaper
+    public class Maper : iMaper
     {
         public IEnumerable<Dictionary<IObjectInfo, IMapping>> Maps { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 

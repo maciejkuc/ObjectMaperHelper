@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IDataWizard
+    public interface IDataWizard
     {
         string SaveData();
     }

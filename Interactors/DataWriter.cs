@@ -1,7 +1,7 @@
 ﻿using System;
-using ObjectMaper.Interfaces;
+using ObjectMappingHelper.Interfaces;
 
-namespace ObjectMaper.Interactors
+namespace ObjectMappingHelper.Interactors
 {
     class DataWriter : IWriter, IDataWriter
     {

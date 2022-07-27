@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
-    internal interface IReaderRow
+    public interface IReaderRow
     {
 		IReaderConfiguration Configuration { get; }
 

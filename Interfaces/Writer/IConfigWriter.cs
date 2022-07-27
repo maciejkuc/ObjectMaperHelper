@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper.Interfaces
+﻿namespace ObjectMappingHelper.Interfaces
 {
-    internal interface IConfigWriter
+    public interface IConfigWriter
     {
         string WriteConfiguration();
     }

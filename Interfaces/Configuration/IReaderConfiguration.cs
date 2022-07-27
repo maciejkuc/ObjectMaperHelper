@@ -1,6 +1,6 @@
-﻿namespace ObjectMaper
+﻿namespace ObjectMappingHelper
 {
-    internal interface IReaderConfiguration
+    public interface IReaderConfiguration
     {
         string Quote { get; set; }
         string Delimeter { get; set; }
