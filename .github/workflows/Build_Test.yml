@@ -20,11 +20,13 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore --verbosity normal
-    - name: Install Newtonsoft
-      run: dotnet add package Newtonsoft.Json --version 12.0.1 --no-restore
-    - name: Install csvHelper
-      run: dotnet add package CsvHelper --version 28.0.1 --no-restore
-    - name: Build --no-restore
-      run: dotnet build --no-restore --configuration Release --verbosity normal
+   # - name: Install Newtonsoft
+   #   run: dotnet add package Newtonsoft.Json --version 12.0.1 --no-restore
+   # - name: Install csvHelper
+   #   run: dotnet add package CsvHelper --version 28.0.1 --no-restore
+    - name: Build Debug --no-restore
+      run: dotnet build --no-restore --configuration Debug
+    - name: Build Release --no-restore
+      run: dotnet build --no-restore --configuration Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
