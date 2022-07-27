@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using CsvHelper;
+using CsvHelper.Configuration;
 
 namespace MappingByColumnName
 {
@@ -10,7 +11,7 @@ namespace MappingByColumnName
     {
         static void Main()
         {
-            //ParseStatement();
+            ParseStatement();
             AutoParseStatement();
         }
 
@@ -19,23 +20,27 @@ namespace MappingByColumnName
         {
             IEnumerable<BankOperationDocument> documents;
 
+            var config = new CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)
+            {
+                HasHeaderRecord = true,
+                DetectDelimiter=true,
+                
+            };
+
             using (var reader = new StreamReader("Lista_transakcji.csv"))
-            using (var csvreader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
-            {               
+            using (var csvreader = new CsvReader(reader, config))
+            {
                 csvreader.Context.RegisterClassMap<BankOperationMap>();
-                csvreader.Context.Configuration.Delimiter = ";";
-                csvreader.Context.Configuration.DetectDelimiter = true;
-                csvreader.Context.Configuration.HasHeaderRecord = true;
-                //csvreader.Context.Configuration.TrimOptions = CsvHelper.Configuration.TrimOptions.InsideQuotes;
-                csvreader.Read();
-                BankOperationDocument doc =  csvreader.GetRecord<BankOperationDocument>();
+
+                //csvreader.Read();
+                //BankOperationDocument doc = csvreader.GetRecord<BankOperationDocument>();
 
                 documents = csvreader.GetRecords<BankOperationDocument>().ToList();
             }
 
             foreach (var doc in documents)
             {
-                Console.WriteLine($"{doc.AccountingDate}, {doc.ContractorName}, {doc.Amount}, {doc.Currency}");
+                Console.WriteLine($"{doc.AccountingDate}; {doc.ContractorName}; {doc.Amount}; {doc.Currency}");
             }
             Console.ReadLine();
         }
@@ -45,13 +50,16 @@ namespace MappingByColumnName
         {
             IEnumerable<SimpleBankOperationDocument> documents;
 
-            using (var reader = new StreamReader("Lista_transakcji_headers.csv"))
-            using (var csvreader = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
+            var config = new CsvConfiguration(System.Globalization.CultureInfo.CurrentCulture)
             {
-                csvreader.Context.Configuration.Delimiter = ";";
-                //csvreader.Context.Configuration.Quote = '"';
-                //csvreader.Configuration.TrimFields = true;
-                //csvreader.Parser.Configuration.TrimHeaders = true;
+                HasHeaderRecord = true,
+                DetectDelimiter = true,
+
+            };
+
+            using (var reader = new StreamReader("Lista_transakcji_headers.csv"))
+            using (var csvreader = new CsvReader(reader, config))
+            {
                 csvreader.Context.AutoMap<SimpleBankOperationDocument>();
                 //reader.Read();
                 //SimpleBankOperationDocument doc =  reader.GetRecord<SimpleBankOperationDocument>();
@@ -61,7 +69,7 @@ namespace MappingByColumnName
 
             foreach (var doc in documents)
             {
-                Console.WriteLine($"{doc.AccountingDate}, {doc.ContractorName}, {doc.Amount}, {doc.Currency}");
+                Console.WriteLine($"{doc.AccountingDate}; {doc.ContractorName}; {doc.Amount}; {doc.Currency}");
             }
             Console.ReadLine();
         }
