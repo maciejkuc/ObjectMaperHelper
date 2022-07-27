@@ -17,9 +17,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 6.0.x
-    - name: Set NuGet server
-      run: dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+        dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
