@@ -38,16 +38,6 @@ namespace ObjectMaper.Interactors
             throw new NotImplementedException();
         }
 
-        public string GetFileHeader()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetFooter()
-        {
-            throw new NotImplementedException();
-        }
-
         public DataTable GetRecords()
         {
             throw new NotImplementedException();

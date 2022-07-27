@@ -6,9 +6,7 @@ namespace ObjectMaper.Interfaces
     internal interface IReader : IReaderRow
     {
         DataTable GetRecords();
-        IEnumerable<T> GetRecords<T>();
-        string GetFileHeader();
-        string[] GetColumnHeaders();
-        string GetFooter();
+        IEnumerable<T> GetRecords<T>();        
+        string[] GetColumnHeaders();     
     }
 }
