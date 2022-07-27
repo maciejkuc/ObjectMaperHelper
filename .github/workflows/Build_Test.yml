@@ -17,11 +17,14 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 5.0.x
-    # - name: Restore dependencies
-    #  run: dotnet restore
-
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore --verbosity normal
+    - name: Install Newtonsoft
+      run: dotnet add package Newtonsoft.Json --version 12.0.1 --verbosity normal
+    - name: Install csvHelper
+      run: dotnet add package CsvHelper --version 28.0.1 --verbosity normal
     - name: Build --no-restore
-      run: dotnet build
+      run: dotnet build --configuration Release --verbosity normal
     - name: Test
       run: dotnet test --no-build --verbosity normal
